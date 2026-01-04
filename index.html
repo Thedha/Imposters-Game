@@ -3,19 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My PWA</title>
-
-  <link rel="manifest" href="manifest.json">
+  <title>Imposters Game</title>
   <link rel="stylesheet" href="style.css">
-
-  <meta name="theme-color" content="#111111">
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <h1>My iPhone App</h1>
-  <p>PWA running on iPhone</p>
+  <h1>Imposters Game</h1>
 
-  <button onclick="count()">Tap me</button>
-  <p id="out">0</p>
+  <div id="setup">
+    <h2>Enter Player Names</h2>
+    <input type="text" id="playerName" placeholder="Player Name">
+    <button onclick="addPlayer()">Add Player</button>
+    <ul id="playersList"></ul>
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <div id="game" style="display:none;">
+    <h2 id="roundInfo"></h2>
+    <div id="turnInfo"></div>
+    <input type="text" id="clueInput" placeholder="Enter your clue">
+    <button onclick="submitClue()">Submit Clue</button>
+
+    <div id="cluesDisplay"></div>
+
+    <div id="voting" style="display:none;">
+      <h3>Vote for the Imposter</h3>
+      <div id="voteButtons"></div>
+      <button onclick="tallyVotes()">Finish Voting</button>
+    </div>
+
+    <div id="result"></div>
+  </div>
 
   <script src="app.js"></script>
 </body>
