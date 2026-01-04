@@ -1,0 +1,14 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: center;
+  background: #111;
+  color: white;
+  padding-top: 40px;
+}
+
+button {
+  font-size: 20px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+}
